@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LAB2_POO_CelestePerez_JosaelZurita_SistemaEstudiante
 {
-    internal class Estudiante
+    internal class Estudiante : Interface
     {
         private string nombre;
         private string id;

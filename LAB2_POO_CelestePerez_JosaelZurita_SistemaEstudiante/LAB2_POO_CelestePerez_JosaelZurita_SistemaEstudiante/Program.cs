@@ -1,4 +1,6 @@
-﻿public class Program
+﻿using LAB2_POO_CelestePerez_JosaelZurita_SistemaEstudiante;
+
+public class Program
 {
     public static void Main()
     {
@@ -23,7 +25,7 @@
         eb1.Calificaciones.Add(c3);
 
         // Polimorfismo
-        List<IMostrable> items = new List<IMostrable>()
+        List<Interface> items = new List<Interface>()
         {
             e1, e2, eb1,
             m1, m2, m3,
@@ -31,7 +33,7 @@
         };
 
         Console.WriteLine("=== DEMOSTRACIÓN DE POLIMORFISMO ===");
-        foreach (IMostrable i in items)
+        foreach (Interface i in items)
         {
             i.MostrarDatos();
         }

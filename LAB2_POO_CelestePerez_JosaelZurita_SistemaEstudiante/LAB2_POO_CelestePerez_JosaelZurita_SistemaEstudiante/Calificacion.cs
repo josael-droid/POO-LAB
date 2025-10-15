@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LAB2_POO_CelestePerez_JosaelZurita_SistemaEstudiante
 {
-    internal class Calificacion
+    internal class Calificacion : Interface
     {
     private Estudiante estudiante;
         private Materia materia;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LAB2_POO_CelestePerez_JosaelZurita_SistemaEstudiante
 {
-    internal class Materia
+    internal class Materia : Interface
     {
         private string nombre;
         private string codigo;
@@ -76,4 +76,6 @@ namespace LAB2_POO_CelestePerez_JosaelZurita_SistemaEstudiante
 
 
     }
+
+
 }
