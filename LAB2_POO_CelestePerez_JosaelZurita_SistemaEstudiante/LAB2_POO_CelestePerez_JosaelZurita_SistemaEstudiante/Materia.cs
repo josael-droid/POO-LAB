@@ -8,6 +8,7 @@ namespace LAB2_POO_CelestePerez_JosaelZurita_SistemaEstudiante
 {
     internal class Materia : Interface
     {
+        //atrivutos privados
         private string nombre;
         private string codigo;
         private int creditos;
@@ -31,6 +32,7 @@ namespace LAB2_POO_CelestePerez_JosaelZurita_SistemaEstudiante
             get => creditos;
             set
             {
+                // Valida que los créditos sean mayores a 0
                 if (value <= 0) throw new ArgumentException("Créditos debe ser > 0");
                 creditos = value;
             }
@@ -42,6 +44,7 @@ namespace LAB2_POO_CelestePerez_JosaelZurita_SistemaEstudiante
             get => cupos;
             set
             {
+                // Valida que los cupos no sean negativos
                 if (value < 0) throw new ArgumentException("Cupos no puede ser negativo");
                 cupos = value;
             }
@@ -51,10 +54,13 @@ namespace LAB2_POO_CelestePerez_JosaelZurita_SistemaEstudiante
             get => inscritos;
             set
             {
+                // Valida que los inscritos 
                 if (value < 0 || value > Cupos) throw new ArgumentException("Inscritos inválido");
                 inscritos = value;
             }
         }
+
+        // Constructor
         public Materia(string nombre, string codigo, int creditos, int cupos = 0, int inscritos = 0)
         {
             Nombre = nombre;
@@ -64,11 +70,13 @@ namespace LAB2_POO_CelestePerez_JosaelZurita_SistemaEstudiante
             Inscritos = inscritos;
         }
 
+        // Calcula la carga semanal de la materia 
         public int CalcularCargaSemanal(int horasPorCredito)
         {
             return Creditos * horasPorCredito;
         }
 
+        // Implementación del método de la interfaz: 
         public void MostrarDatos()
         {
             Console.WriteLine($"[MATERIA] Nombre: {Nombre}, Código: {Codigo}, Créditos: {Creditos}, Cupos: {Cupos}, Inscritos: {Inscritos}");
